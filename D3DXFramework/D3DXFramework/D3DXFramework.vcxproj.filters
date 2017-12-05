@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="0.Framework">
+      <UniqueIdentifier>{eee3df4c-59ee-4d23-86f6-f4507d6535ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Framework\GameNode">
+      <UniqueIdentifier>{09de6d98-419a-4d3c-94d9-1329e5e7efb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Framework\SingletonBase">
+      <UniqueIdentifier>{160de6c0-260c-4103-a8d3-3b430ade9edc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1.Game">
+      <UniqueIdentifier>{4d18380a-bb71-4805-9d9e-5198d27f1ee8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1.Game\Main">
+      <UniqueIdentifier>{8d8d79fa-6445-4569-ace1-2000a0d3ed88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Framework\Manager">
+      <UniqueIdentifier>{bb8e954e-576e-4009-a8c5-7e7643c1f900}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Framework\Timer">
+      <UniqueIdentifier>{96099816-8bb0-4d4c-8437-a9d963746560}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Framework\Manager\TimeManager">
+      <UniqueIdentifier>{269fd9f5-6542-4cd9-bdba-c215fb95b365}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Framework\DirectX">
+      <UniqueIdentifier>{54256574-6ad5-43dd-b72d-a4754ee7a5f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Framework\Manager\CameraManager">
+      <UniqueIdentifier>{29bc23c2-3366-4a5d-882e-06c0f932bad2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Framework\Manager\SoundManager">
+      <UniqueIdentifier>{7fbb6ad6-32d0-4a98-b436-d796df4c6791}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Framework\Manager\DirectXManager">
+      <UniqueIdentifier>{1bf3b4ee-16a1-431e-8731-537b0aa9658d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Framework\Manager\InputManager">
+      <UniqueIdentifier>{a8de7773-721e-40a5-aa61-ead25437e6cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Framework\Manager\FontManager">
+      <UniqueIdentifier>{a1901c55-b7b7-465a-a01b-648e877d6d9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Framework\Object">
+      <UniqueIdentifier>{277281e0-c64e-4cbd-bc05-b6208102613e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Framework\AutoRelease">
+      <UniqueIdentifier>{4cc9c89a-0a45-4527-840e-4d28f79b1649}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Framework\Manager\ObjectManager">
+      <UniqueIdentifier>{dc129a69-3ed0-4573-a385-9b0a6ab4515c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1.Game\Objects">
+      <UniqueIdentifier>{7b889e70-1919-4f5f-aa57-a682668d5e04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1.Game\Objects\Grid">
+      <UniqueIdentifier>{fa9d5069-06a6-4bca-acf7-f162b6090742}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Framework\Manager\SceneManager">
+      <UniqueIdentifier>{3c3ea6b9-75c7-45de-9e44-4742a0129fd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1.Game\Scenes">
+      <UniqueIdentifier>{b46541d9-23bc-4949-b74d-adfbfda4a6e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Framework\ObjLoader">
+      <UniqueIdentifier>{08b40acd-5424-4256-a731-828459c88849}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Framework\MaterialTexture">
+      <UniqueIdentifier>{8204fafc-af34-44a3-8f64-6e403999ea62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Framework\Manager\TextureManager">
+      <UniqueIdentifier>{45fa6f97-e6c7-47f1-a3f4-c15899031e38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Framework\XFile">
+      <UniqueIdentifier>{426d405b-dd6b-4b2b-bebf-a7f2c53cd9b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Framework\XFile\SkinnedMesh">
+      <UniqueIdentifier>{c6662b6b-cea8-456b-8cd0-932f4b4988b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Framework\XFile\AllocateHierarchy">
+      <UniqueIdentifier>{98f2c703-0c70-4be7-9d0b-439674c7bcbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="0.Framework\Manager\SknnedMeshManager">
+      <UniqueIdentifier>{b59e0da7-4213-4678-aacc-7f8bb1f19d67}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="D3DXFramework.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GameNode.h">
+      <Filter>0.Framework\GameNode</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame.h">
+      <Filter>1.Game\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="SingletonBase.h">
+      <Filter>0.Framework\SingletonBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>0.Framework\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeManager.h">
+      <Filter>0.Framework\Manager\TimeManager</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXDevice.h">
+      <Filter>0.Framework\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectXManager.h">
+      <Filter>0.Framework\Manager\DirectXManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraManager.h">
+      <Filter>0.Framework\Manager\CameraManager</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>0.Framework\Manager\InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundManager.h">
+      <Filter>0.Framework\Manager\SoundManager</Filter>
+    </ClInclude>
+    <ClInclude Include="InputDef.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="FontManager.h">
+      <Filter>0.Framework\Manager\FontManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>0.Framework\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoReleasePool.h">
+      <Filter>0.Framework\AutoRelease</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectManager.h">
+      <Filter>0.Framework\Manager\ObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Grid.h">
+      <Filter>1.Game\Objects\Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>0.Framework\Manager\SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="TestScene.h">
+      <Filter>1.Game\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="TestScene2.h">
+      <Filter>1.Game\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Group.h">
+      <Filter>0.Framework\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="MaterialTexture.h">
+      <Filter>0.Framework\MaterialTexture</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjLoader.h">
+      <Filter>0.Framework\ObjLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager.h">
+      <Filter>0.Framework\Manager\TextureManager</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinnedMesh.h">
+      <Filter>0.Framework\XFile\SkinnedMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="AllocateHierarchy.h">
+      <Filter>0.Framework\XFile\AllocateHierarchy</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinnedMeshManager.h">
+      <Filter>0.Framework\Manager\SknnedMeshManager</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="D3DXFramework.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GameNode.cpp">
+      <Filter>0.Framework\GameNode</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame.cpp">
+      <Filter>1.Game\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>0.Framework\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeManager.cpp">
+      <Filter>0.Framework\Manager\TimeManager</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXDevice.cpp">
+      <Filter>0.Framework\DirectX</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectXManager.cpp">
+      <Filter>0.Framework\Manager\DirectXManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraManager.cpp">
+      <Filter>0.Framework\Manager\CameraManager</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>0.Framework\Manager\InputManager</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundManager.cpp">
+      <Filter>0.Framework\Manager\SoundManager</Filter>
+    </ClCompile>
+    <ClCompile Include="FontManager.cpp">
+      <Filter>0.Framework\Manager\FontManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>0.Framework\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoReleasePool.cpp">
+      <Filter>0.Framework\AutoRelease</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectManager.cpp">
+      <Filter>0.Framework\Manager\ObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Grid.cpp">
+      <Filter>1.Game\Objects\Grid</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>0.Framework\Manager\SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="TestScene.cpp">
+      <Filter>1.Game\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="TestScene2.cpp">
+      <Filter>1.Game\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Group.cpp">
+      <Filter>0.Framework\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="MaterialTexture.cpp">
+      <Filter>0.Framework\MaterialTexture</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjLoader.cpp">
+      <Filter>0.Framework\ObjLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>0.Framework\Manager\TextureManager</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinnedMesh.cpp">
+      <Filter>0.Framework\XFile\SkinnedMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="AllocateHierarchy.cpp">
+      <Filter>0.Framework\XFile\AllocateHierarchy</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinnedMeshManager.cpp">
+      <Filter>0.Framework\Manager\SknnedMeshManager</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="D3DXFramework.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="D3DXFramework.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
