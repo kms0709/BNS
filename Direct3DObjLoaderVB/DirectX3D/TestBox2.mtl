@@ -1,0 +1,86 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# 파일 생성됨: 05.12.2017 16:51:17
+
+newmtl Map_09___Default
+	Ns 3.5000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.2000 0.4000 0.9000
+	Kd 0.2000 0.4000 0.9000
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Program Files\Autodesk\3ds Max 2018\Maps\seafloor.dds
+	map_Kd C:\Program Files\Autodesk\3ds Max 2018\Maps\seafloor.dds
+
+newmtl Map_14___Default
+	Ns 4.6000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.4000 0.7000
+	Kd 0.0000 0.4000 0.7000
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\tlseh\Downloads\복습\Direct3DObjLoaderVB\DirectX3D\obj\NMP_Ripples2_512.dds
+	map_Kd C:\Users\tlseh\Downloads\복습\Direct3DObjLoaderVB\DirectX3D\obj\NMP_Ripples2_512.dds
+
+newmtl Map_02___Default
+	Ns 6.7000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5000 0.1000 0.0000
+	Kd 0.5000 0.1000 0.0000
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Program Files\Autodesk\3ds Max 2018\Maps\seafloor.dds
+	map_Kd C:\Program Files\Autodesk\3ds Max 2018\Maps\seafloor.dds
+
+newmtl Map_Material__2
+	Ns 4.1000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.3000 0.2000 0.7000
+	Kd 0.3000 0.2000 0.7000
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\tlseh\Downloads\복습\Direct3DObjLoaderVB\DirectX3D\obj\NMP_Ripples2_512.dds
+	map_Kd C:\Users\tlseh\Downloads\복습\Direct3DObjLoaderVB\DirectX3D\obj\NMP_Ripples2_512.dds
+
+newmtl Map_08___Default
+	Ns 5.5000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.6000 0.6000 0.6000
+	Kd 0.6000 0.6000 0.6000
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\tlseh\Downloads\복습\Direct3DObjLoaderVB\DirectX3D\obj\NMP_Ripples2_512.dds
+	map_Kd C:\Users\tlseh\Downloads\복습\Direct3DObjLoaderVB\DirectX3D\obj\NMP_Ripples2_512.dds
+
+newmtl Map_13___Default
+	Ns 4.6000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.2000 0.1000 0.7000
+	Kd 0.2000 0.1000 0.7000
+	Ks 0.9000 0.9000 0.9000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Program Files\Autodesk\3ds Max 2018\Maps\seafloor.dds
+	map_Kd C:\Program Files\Autodesk\3ds Max 2018\Maps\seafloor.dds

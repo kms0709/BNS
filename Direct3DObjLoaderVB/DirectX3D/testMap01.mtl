@@ -1,0 +1,58 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 05.12.2017 17:14:43
+
+#
+newmtl Map_09_-_Default
+Ka  0.2 0.4 0.9
+d  1.0
+Ns  3.5
+illum 2
+map_Kd seafloor.dds
+#
+newmtl Map_14_-_Default
+Ka  
+Kd  0.0 0.4 0.7
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  4.6
+illum 2
+map_Kd NMP_Ripples2_512.dds
+#
+newmtl Map_02_-_Default
+Ka  0.5 0.1 0.0
+Kd  0.5 0.1 0.0
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  6.7
+illum 2
+map_Kd seafloor.dds
+#
+newmtl Map_Material__2
+Ka  0.3 0.2 0.7
+Kd  0.3 0.2 0.7
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  4.1
+illum 2
+map_Kd NMP_Ripples2_512.dds
+#
+newmtl Map_08_-_Default
+Ka  0.6 0.6 0.6
+Kd  0.6 0.6 0.6
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  5.5
+illum 2
+map_Kd NMP_Ripples2_512.dds
+#
+newmtl Map_13_-_Default
+Ka  0.2 0.1 0.7
+Kd  0.2 0.1 0.7
+Ks  0.9 0.9 0.9
+d  1.0
+Ns  4.6
+illum 2
+map_Kd seafloor.dds
+#
+# EOF
+
