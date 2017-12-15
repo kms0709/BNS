@@ -30,7 +30,7 @@ void Grid::Init()
 
 	for ( int i = 1; i <= lineCount; ++i )
 	{
-		color = ( i % 5 == 0 ) ? D3DCOLOR_XRGB( 255, 255, 255 ) : D3DCOLOR_XRGB( 75, 75, 75 );
+		color = ( i % 5 == 0 ) ? D3DCOLOR_XRGB( 0, 0, 0 ) : D3DCOLOR_XRGB( 155, 155, 155 );
 
 		lineList.push_back( LinePC( D3DXVECTOR3( -max, 0.0f, i * interval ), color ) );
 		lineList.push_back( LinePC( D3DXVECTOR3( max, 0.0f, i * interval ), color ) );

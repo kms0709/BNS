@@ -72,8 +72,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(DXSDK_DIR)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -148,6 +148,7 @@
     <ClInclude Include="AllocateHierarchy.h" />
     <ClInclude Include="AutoReleasePool.h" />
     <ClInclude Include="CameraManager.h" />
+    <ClInclude Include="CharacterCtrl.h" />
     <ClInclude Include="D3DXFramework.h" />
     <ClInclude Include="DirectXDevice.h" />
     <ClInclude Include="DirectXManager.h" />
@@ -162,6 +163,7 @@
     <ClInclude Include="Object.h" />
     <ClInclude Include="ObjectManager.h" />
     <ClInclude Include="ObjLoader.h" />
+    <ClInclude Include="PlayerModel.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="SingletonBase.h" />
@@ -181,6 +183,7 @@
     <ClCompile Include="AllocateHierarchy.cpp" />
     <ClCompile Include="AutoReleasePool.cpp" />
     <ClCompile Include="CameraManager.cpp" />
+    <ClCompile Include="CharacterCtrl.cpp" />
     <ClCompile Include="D3DXFramework.cpp" />
     <ClCompile Include="DirectXDevice.cpp" />
     <ClCompile Include="DirectXManager.cpp" />
@@ -194,6 +197,7 @@
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="ObjectManager.cpp" />
     <ClCompile Include="ObjLoader.cpp" />
+    <ClCompile Include="PlayerModel.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="SkinnedMesh.cpp" />
     <ClCompile Include="SkinnedMeshManager.cpp" />

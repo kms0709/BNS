@@ -31,13 +31,17 @@ void TestScene2::Release()
 
 void TestScene2::Update()
 {
+	for ( int i = 0; i < _SMList.size(); ++i )
+	{
+		_SMList[ i ]->Update();
+	}
 }
 
 void TestScene2::Render()
 {
 	for ( int i = 0; i < _SMList.size(); ++i )
 	{
-		_SMList[ i ]->UpdateAndRender();
+		_SMList[ i ]->Render();
 	}
 
 }

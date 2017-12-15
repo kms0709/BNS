@@ -8,38 +8,47 @@
 SkinnedMesh::SkinnedMesh()
 	: root( nullptr )
 	, animationController( nullptr )
-	//, blendTime (0.3f)
-	//, passedBlendTime(0.0f)
+	, blendTime( 0.3f )
+	, passedBlendTime( 0.0f )
 	, m_dwWorkingPaletteSize( 0 )
 	, m_pmWorkingPalette( NULL )
 	, m_pEffect( NULL )
 	, m_vPosition( 0, 0, 0 )
-
+	, m_fRot( 0, 0, 0 )
 {
+	//	D3DXMatrixIdentity( &rootMatrix );
 }
 
 SkinnedMesh::SkinnedMesh( wchar_t* szFolder, wchar_t* szFilename )
 	: root( NULL )
 	, animationController( NULL )
+	, blendTime( 0.3f )
+	, passedBlendTime( 0.0f )
 	, m_dwWorkingPaletteSize( 0 )
 	, m_pmWorkingPalette( NULL )
 	, m_pEffect( NULL )
 	, m_vPosition( 0, 0, 0 )
+	, m_fRot( 0, 0, 0 )
 {
 	SkinnedMesh* skinnedMesh = MANAGER_SKINNED->GetSkinnedMesh( szFolder, szFilename );
 
+	D3DXMatrixIdentity( &rootMatrix );
+	D3DXMatrixIdentity( &matWorld );
 	root = skinnedMesh->root;
 	m_dwWorkingPaletteSize = skinnedMesh->m_dwWorkingPaletteSize;
 	m_pmWorkingPalette = skinnedMesh->m_pmWorkingPalette;
 	m_pEffect = skinnedMesh->m_pEffect;
 	m_stBoundingSphere = skinnedMesh->m_stBoundingSphere;
 
-	skinnedMesh->animationController->CloneAnimationController(
-		skinnedMesh->animationController->GetMaxNumAnimationOutputs(),
-		skinnedMesh->animationController->GetMaxNumAnimationSets(),
-		skinnedMesh->animationController->GetMaxNumTracks(),
-		skinnedMesh->animationController->GetMaxNumEvents(),
-		&animationController );
+	if ( skinnedMesh->animationController )
+	{
+		skinnedMesh->animationController->CloneAnimationController(
+			skinnedMesh->animationController->GetMaxNumAnimationOutputs(),
+			skinnedMesh->animationController->GetMaxNumAnimationSets(),
+			skinnedMesh->animationController->GetMaxNumTracks(),
+			skinnedMesh->animationController->GetMaxNumEvents(),
+			&animationController );
+	}
 }
 
 
@@ -84,6 +93,11 @@ void SkinnedMesh::Load( const wchar_t * foldername, const wchar_t * filename )
 
 	m_dwWorkingPaletteSize = alloc.GetMaxPaletteSize();
 	m_pmWorkingPalette = new D3DXMATRIX[ m_dwWorkingPaletteSize ];
+
+	for ( DWORD i = 0; i < m_dwWorkingPaletteSize; ++i )
+	{
+		D3DXMatrixIdentity( &m_pmWorkingPalette[ i ] );
+	}
 	if ( m_pmWorkingPalette == NULL )
 	{
 		m_dwWorkingPaletteSize = 0;
@@ -159,73 +173,120 @@ void SkinnedMesh::SetupBoneMatrixPtrs( LPD3DXFRAME frame )
 
 }
 
-//void SkinnedMesh::UpdateSkinnedMesh ( LPD3DXFRAME frame)
+//void SkinnedMesh::UpdateSkinnedMesh( Bone* bone )
 //{
 //	// pCurrentBoneMatrices 를 계산하시오
 //	// pCurrentBoneMatrices = pBoneOffsetMatrices * ppBoneMatrixPtrs 
 //
-//	if ( frame == nullptr )
+//	if ( bone == nullptr )
 //		return;
 //
-//	Bone* bone = ( Bone* ) frame;
 //	if ( bone->pMeshContainer )
 //	{
-//		BoneMesh* boneMesh = ( BoneMesh* ) bone->pMeshContainer;
-//		if ( boneMesh->pSkinInfo )
+//		BoneMesh* pBoneMesh = ( BoneMesh* ) bone->pMeshContainer;
+//		if ( pBoneMesh->pSkinInfo )
 //		{
-//			LPD3DXSKININFO pSkinInfo = boneMesh->pSkinInfo;
-//			DWORD dwNumBones = pSkinInfo->GetNumBones ();
-//			for ( DWORD i = 0; i < dwNumBones; ++i )
+//			LPD3DXSKININFO pSkinInfo = pBoneMesh->pSkinInfo;
+//
+//			DWORD num = pSkinInfo->GetNumBones();
+//
+//			for ( DWORD i = 0; i < num; ++i )
 //			{
-//				boneMesh->pCurrentBoneMatrices[i] =
-//					boneMesh->pBoneOffsetMatrices[i] *
-//					*( boneMesh->ppBoneMatrixPtrs[i] );
+//				pBoneMesh->pCurrentBoneMatrices[ i ] =
+//					pBoneMesh->pBoneOffsetMatrices[ i ] *
+//					( *pBoneMesh->ppBoneMatrixPtrs[ i ] );
 //			}
 //
 //			BYTE* src = nullptr;
 //			BYTE* dest = nullptr;
 //
-//			boneMesh->orgMesh->LockVertexBuffer ( D3DLOCK_READONLY, ( void** ) &src );
-//			boneMesh->workMesh->LockVertexBuffer ( 0, ( void** ) &dest );
+//			pBoneMesh->orgMesh->LockVertexBuffer( D3DLOCK_READONLY, ( void** ) &src );
+//			pBoneMesh->workMesh->LockVertexBuffer( 0, ( void** ) &dest );
 //
 //			//MeshData.pMesh을 업데이트 시켜준다.
-//			pSkinInfo->UpdateSkinnedMesh (
-//				boneMesh->pCurrentBoneMatrices, nullptr, src, dest );
+//			pSkinInfo->UpdateSkinnedMesh(
+//				pBoneMesh->pCurrentBoneMatrices, nullptr, src, dest );
 //
-//			boneMesh->workMesh->UnlockVertexBuffer ();
-//			boneMesh->orgMesh->UnlockVertexBuffer ();
+//			pBoneMesh->workMesh->UnlockVertexBuffer();
+//			pBoneMesh->orgMesh->UnlockVertexBuffer();
 //		}
 //	}
 //
 //	//재귀적으로 모든 프레임에 대해서 실행.
-//	if ( frame->pFrameFirstChild )
+//	if ( bone->pFrameFirstChild )
 //	{
-//		UpdateSkinnedMesh ( frame->pFrameFirstChild );
+//		UpdateSkinnedMesh( ( Bone* ) bone->pFrameFirstChild );
 //	}
 //
-//	if ( frame->pFrameSibling )
+//	if ( bone->pFrameSibling )
 //	{
-//		UpdateSkinnedMesh ( frame->pFrameSibling );
+//		UpdateSkinnedMesh( ( Bone* ) bone->pFrameSibling );
 //	}
 //
 //}
 
-void SkinnedMesh::UpdateAndRender()
+void SkinnedMesh::Update()
+{
+	UpdatePivot();
+
+	if ( root )
+	{
+		Update( root, NULL );
+	}
+}
+
+void SkinnedMesh::UpdatePivot()
+{
+
+	D3DXMATRIX matRotX, matRotY, matRotZ;
+	D3DXMatrixRotationX( &matRotX, m_fRot.x );
+	D3DXMatrixRotationY( &matRotY, m_fRot.y );
+	D3DXMatrixRotationZ( &matRotZ, m_fRot.z );
+
+	D3DXMATRIX matPos;
+	D3DXMatrixTranslation( &matPos, m_vPosition.x, m_vPosition.y, m_vPosition.z );
+
+	rootMatrix = matRotX * matRotY * matRotZ * matPos;
+}
+
+void SkinnedMesh::AnimationUpdate()
 {
 	if ( animationController )
 	{
 		animationController->AdvanceTime( MANAGER_TIME->GetElapsedTime(), NULL );
 	}
 
+	// 블렌드 설정
+	if ( passedBlendTime <= blendTime )
+	{
+		passedBlendTime += MANAGER_TIME->GetElapsedTime();
+
+		// 끝날때까지 계산
+		if ( passedBlendTime < blendTime )
+		{
+			float fWeight = passedBlendTime / blendTime;
+
+			animationController->SetTrackWeight( 0, fWeight );
+			animationController->SetTrackWeight( 1, 1.0f - fWeight );
+		}
+		// 끝나면 꺼줌
+		else
+		{
+			animationController->SetTrackWeight( 0, 1 );
+			animationController->SetTrackWeight( 1, 0 );
+
+			animationController->SetTrackEnable( 1, false );
+		}
+	}
+}
+
+void SkinnedMesh::Render()
+{
 	if ( root )
 	{
-		D3DXMATRIXA16 mat;
-		D3DXMatrixTranslation( &mat, m_vPosition.x, m_vPosition.y, m_vPosition.z );
-
-		Update( root, &mat );
 		Render( root );
+		//BoundingSphereDraw();
 	}
-
 }
 
 void SkinnedMesh::Render( Bone* pBone )
@@ -240,9 +301,17 @@ void SkinnedMesh::Render( Bone* pBone )
 	{
 		BoneMesh* pBoneMesh = ( BoneMesh* ) pBone->pMeshContainer;
 
+		LPD3DXBONECOMBINATION pBoneCombos;
+
 		// get bone combinations
-		LPD3DXBONECOMBINATION pBoneCombos =
-			( LPD3DXBONECOMBINATION ) ( pBoneMesh->pBufBoneCombos->GetBufferPointer() );
+		if ( pBoneMesh->pBufBoneCombos )
+		{
+			pBoneCombos = ( LPD3DXBONECOMBINATION ) ( pBoneMesh->pBufBoneCombos->GetBufferPointer() );
+		}
+		else
+		{
+			pBoneCombos = nullptr;
+		}
 
 		D3DXMATRIXA16 matViewProj, matView, matProj;
 		D3DDevice->GetTransform( D3DTS_VIEW, &matView );
@@ -264,9 +333,9 @@ void SkinnedMesh::Render( Bone* pBone )
 				DWORD dwMatrixIndex = pBoneCombos[ dwAttrib ].BoneId[ dwPalEntry ];
 				if ( dwMatrixIndex != UINT_MAX )
 				{
-					m_pmWorkingPalette[ dwPalEntry ] =
+					m_pmWorkingPalette[ dwPalEntry ] = 
 						pBoneMesh->pBoneOffsetMatrices[ dwMatrixIndex ] *
-						( *pBoneMesh->ppBoneMatrixPtrs[ dwMatrixIndex ] );
+						( *pBoneMesh->ppBoneMatrixPtrs[ dwMatrixIndex ] ) * rootMatrix * matWorld;
 				}
 			}
 
@@ -318,13 +387,63 @@ void SkinnedMesh::Render( Bone* pBone )
 	}
 }
 
+void SkinnedMesh::BoundingSphereDraw()
+{
+	if ( m_stBoundingSphere.fRadius )
+	{
+		LPD3DXMESH mesh;
+		D3DXCreateSphere( D3DDevice, m_stBoundingSphere.fRadius, 20, 20, &mesh, NULL );
 
-void SkinnedMesh::SetAnimationIndex( int index )
+		D3DDevice->SetRenderState( D3DRS_LIGHTING, FALSE );
+		D3DDevice->SetRenderState( D3DRS_FILLMODE, D3DFILL_WIREFRAME );
+		D3DDevice->SetRenderState( D3DRS_CULLMODE, D3DCULL_NONE );
+		D3DDevice->SetFVF( D3DFVF_XYZ | D3DFVF_DIFFUSE );
+
+		mesh->DrawSubset( 0 );
+
+		D3DDevice->SetRenderState( D3DRS_LIGHTING, TRUE );
+		D3DDevice->SetRenderState( D3DRS_FILLMODE, D3DFILL_SOLID );
+		D3DDevice->SetRenderState( D3DRS_CULLMODE, D3DCULL_CCW );
+	}
+}
+
+
+void SkinnedMesh::SetAnimationIndex( int index, bool isBlend )
 {
 	if ( !animationController )
 		return;
+
 	LPD3DXANIMATIONSET pAnimSet = NULL;
 	animationController->GetAnimationSet( index, &pAnimSet );
+
+	// 블렌드 설정
+	if ( isBlend )
+	{
+		// 블렌드를 할려면 이전 애니메이션도 구해야한다.
+		LPD3DXANIMATIONSET pPrevAnimSet = NULL;
+
+		animationController->GetTrackAnimationSet( 0, &pPrevAnimSet );	// 0번째 트랙을 이전(현재) 트랙에 담는다.
+		animationController->SetTrackAnimationSet( 1, pPrevAnimSet );
+
+		// GetTrackDesc 으로 현재 트랙에 다음 트랙에 대한 정보를 넣어준다.
+		// GetTrackDesc 0, 1
+		// 0, 0.0f
+		// 1, 1.0f
+		D3DXTRACK_DESC stTrackDest;
+		animationController->GetTrackDesc( 0, &stTrackDest );	// 0번째 트랙의 정보를 stTrackDest에 담는다.
+		animationController->SetTrackDesc( 1, &stTrackDest );	// 1번째 트랙의 정보에 stTrackDest를 넣는다.
+
+		// weight의 값은 0 ~ 1
+		// weight 넣어주기
+		animationController->SetTrackWeight( 0, 0.0f );	// 0번째 트랙 가중치(무게)에 0.0f 를 설정한다.
+		animationController->SetTrackWeight( 1, 1.0f );	// 1번째 트랙 가중치(무게)에 1.0f 를 설정한다.
+
+		animationController->SetTrackAnimationSet( 1, pPrevAnimSet );	// 1번째 트랙에 이전(현재) 트랙을 담는다.
+		SAFE_RELEASE( pPrevAnimSet );
+
+		passedBlendTime = 0.0f;
+	}
+
 	animationController->SetTrackAnimationSet( 0, pAnimSet );
 	SAFE_RELEASE( pAnimSet );
 
@@ -338,6 +457,19 @@ void SkinnedMesh::Destroy()
 	SAFE_RELEASE( m_pEffect );
 }
 
+//void SkinnedMesh::SetMatrices( IN LPD3DXFRAME frame, IN LPSTR boneName )
+//{
+//	Bone* bone = ( Bone* ) D3DXFrameFind( frame, boneName );
+//	rootMatrix = bone->CombinedTransformationMatrix;
+//}
+
+//void SkinnedMesh::SetBone( IN LPD3DXFRAME frame, IN LPSTR boneName, IN LPSTR rootBoneName )
+//{
+//	Bone* bone = ( Bone* )D3DXFrameFind( frame, boneName );
+//	Bone* rootBone = ( Bone* )D3DXFrameFind( root, rootBoneName );
+//
+//	rootBone->CombinedTransformationMatrix = bone->CombinedTransformationMatrix;
+//}
 
 void SkinnedMesh::SetRandomTrackPosition()
 {

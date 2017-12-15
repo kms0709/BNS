@@ -3,10 +3,16 @@
 #include "Grid.h"
 #include "ObjLoader.h"
 
+class PlayerModel;
+class CharacterCtrl;
+
 class TestScene : public GameNode
 {
 private:
 
+	PlayerModel* pModel;
+	CharacterCtrl* Ctrl;
+	
 	Grid* grid;
 
 	D3DXMATRIX worldMat;

@@ -58,6 +58,8 @@ void GameNode::Release( void )
 		MANAGER_TIME->Release();
 		MANAGER_SOUND->Release();
 
+		
+
 		MANAGER_CAMERA->ReleaseSingleton();
 		MANAGER_FONT->ReleaseSingleton();
 		MANAGER_INPUT->ReleaseSingleton();
@@ -80,19 +82,25 @@ void GameNode::Update( void )
 	GetClientRect( g_hWnd, &g_ClientRC );
 	GetWindowRect( g_hWnd, &g_WindowRC );
 
-	RECT currentWindowRC;
-	POINT currentDistance;
+	//RECT currentWindowRC;
+	//POINT currentDistance;
 
-	currentDistance.x = (g_WindowRC.right - ( g_WindowRC.left + g_ClientRC.right ) ) / 2;
-	currentDistance.y = (g_WindowRC.bottom - ( g_WindowRC.top + g_ClientRC.bottom ) ) / 2;
+	//currentDistance.x = (g_WindowRC.right - ( g_WindowRC.left + g_ClientRC.right ) ) / 2;
+	//currentDistance.y = (g_WindowRC.bottom - ( g_WindowRC.top + g_ClientRC.bottom ) ) / 2;
 
-	currentWindowRC.left = g_WindowRC.left + currentDistance.x;
-	currentWindowRC.right = g_WindowRC.right - currentDistance.x;
-	currentWindowRC.top = g_WindowRC.top + currentDistance.x;
-	currentWindowRC.bottom = g_WindowRC.bottom - currentDistance.x;
+	//currentWindowRC.left = g_WindowRC.left + currentDistance.x;
+	//currentWindowRC.right = g_WindowRC.right - currentDistance.x;
+	//currentWindowRC.top = g_WindowRC.top + currentDistance.x;
+	//currentWindowRC.bottom = g_WindowRC.bottom - currentDistance.x;
 
+//	if ( g_WindowActive )
+//		ClipCursor( &currentWindowRC );
 
-	ClipCursor( &currentWindowRC );
+	//POINT centerPos;
+	//centerPos.x = currentWindowRC.left + ( currentWindowRC.right - currentWindowRC.left ) / 2;
+	//centerPos.y = currentWindowRC.top + ( currentWindowRC.bottom - currentWindowRC.top ) / 2;
+
+//	SetCursorPos( centerPos.x, centerPos.y );
 
 }
 
@@ -107,6 +115,28 @@ LRESULT GameNode::MainProc( HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
 
 	switch ( message )
 	{
+	case WM_SETCURSOR:
+		{
+//			if ( g_cursorActive )
+//			{
+////				SetCursor( LoadCursor( nullptr, IDC_ARROW ) );
+//				ShowCursor( TRUE );
+//				return true;
+//			}
+//			else
+//			{
+////				SetCursor( NULL );
+//				ShowCursor( FALSE );
+//				return true;
+//			}
+			ShowCursor( FALSE );
+			return true;
+		}
+		break;
+	case WM_ACTIVATEAPP:
+			g_WindowActive = wParam;
+
+		break;
 		//마우스 좌표를 읽어오는 함수
 	case WM_MOUSEMOVE:
 		g_ptMouse.x = static_cast< float >LOWORD( lParam );

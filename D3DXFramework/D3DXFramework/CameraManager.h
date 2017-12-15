@@ -17,6 +17,7 @@ private:
 	D3DXMATRIX projMatrix;
 
 	POINT prevPtMouse;
+	POINT centerPos;
 
 public:
 	void Init();
@@ -26,6 +27,7 @@ public:
 
 	void WndProc( HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam );
 
+	float GetfRotY() { return fRotY; }
 	void SetTarget( D3DXVECTOR3 t ) { lookAt = t; }
 
 	CameraManager();

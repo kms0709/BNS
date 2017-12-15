@@ -148,8 +148,10 @@ STDMETHODIMP AllocateHierarchy::CreateMeshContainer(
 		DWORD dwNumBones = pSkinInfo->GetNumBones();
 		pBoneMesh->ppBoneMatrixPtrs = new D3DXMATRIX*[ dwNumBones ];
 		pBoneMesh->pBoneOffsetMatrices = new D3DXMATRIX[ dwNumBones ];
+		pBoneMesh->pCurrentBoneMatrices = new D3DXMATRIX[ dwNumBones ];
 		for ( DWORD i = 0; i < dwNumBones; ++i )
 		{
+//			pBoneMesh->pBoneOffsetMatrices[ i ] = *( pBoneMesh->pSkinInfo->GetBoneOffsetMatrix( i ) );
 			pBoneMesh->ppBoneMatrixPtrs[ i ] = NULL;
 			pBoneMesh->pBoneOffsetMatrices[ i ] = *( pSkinInfo->GetBoneOffsetMatrix( i ) );
 		}

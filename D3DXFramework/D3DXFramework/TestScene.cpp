@@ -1,5 +1,7 @@
 #include "stdafx.h"
 #include "TestScene.h"
+#include "PlayerModel.h"
+#include "CharacterCtrl.h"
 
 
 TestScene::TestScene()
@@ -23,6 +25,11 @@ HRESULT TestScene::Init()
 	
 //	SAFE_DELETE( objLoader );
 
+	pModel = new PlayerModel;
+	pModel->Init();
+	Ctrl = new CharacterCtrl;
+	Ctrl->Init();
+
 	grid = new Grid;
 	grid->Init();
 
@@ -33,6 +40,7 @@ HRESULT TestScene::Init()
 	m_light.Specular = D3DXCOLOR( 0.3f, 0.3f, 0.3f, 1.0f );
 	m_light.Direction = D3DXVECTOR3( 0, 1, 0 );
 
+
 	D3DDevice->SetLight( 0, &m_light );
 	D3DDevice->LightEnable( 0, TRUE );
 
@@ -42,14 +50,19 @@ HRESULT TestScene::Init()
 void TestScene::Release()
 {
 	SAFE_RELEASE( grid );
-//	for each ( auto p in mapGroup )
-//	{
-//		SAFE_RELEASE( p );
-//	}
+
+	SAFE_RELEASE( pModel );
 }
 
 void TestScene::Update()
 {
+//	_popori[ 1 ]->SetMatrices( _popori[ 0 ]->GetRoot(), "Bip01-Spine3");
+//	_popori[ 1 ]->SetBone( _popori[ 0 ]->GetRoot(), "Bip01-Spine3", "Dummy_Spine3" );
+//	_popori[ 1 ]->SetBone( _popori[ 0 ]->GetRoot(), "Bip01-Neck", "Dummy_Neck" );
+
+	Ctrl->Update();
+	pModel->Update();
+	pModel->SetMatWorld( Ctrl->GetMatrix() );
 
 }
 
@@ -62,6 +75,8 @@ void TestScene::Render()
 
 //	for each ( auto p in mapGroup )
 //		p->Render();
+
+	pModel->Render();
 
 	grid->Render();
 }

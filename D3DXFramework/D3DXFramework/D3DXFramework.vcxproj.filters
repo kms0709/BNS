@@ -97,6 +97,9 @@
     <Filter Include="0.Framework\Manager\SknnedMeshManager">
       <UniqueIdentifier>{b59e0da7-4213-4678-aacc-7f8bb1f19d67}</UniqueIdentifier>
     </Filter>
+    <Filter Include="1.Game\Objects\Player">
+      <UniqueIdentifier>{21f13055-1e46-4538-afe1-e5b60504550a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -192,6 +195,12 @@
     <ClInclude Include="SkinnedMeshManager.h">
       <Filter>0.Framework\Manager\SknnedMeshManager</Filter>
     </ClInclude>
+    <ClInclude Include="CharacterCtrl.h">
+      <Filter>1.Game\Objects\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerModel.h">
+      <Filter>1.Game\Objects\Player</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -271,6 +280,12 @@
     </ClCompile>
     <ClCompile Include="SkinnedMeshManager.cpp">
       <Filter>0.Framework\Manager\SknnedMeshManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterCtrl.cpp">
+      <Filter>1.Game\Objects\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerModel.cpp">
+      <Filter>1.Game\Objects\Player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
