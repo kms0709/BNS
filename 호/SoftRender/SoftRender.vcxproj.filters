@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="3D">
+      <UniqueIdentifier>{5605d29c-a985-4a6e-89a4-cbb42edb90a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3D\cube">
+      <UniqueIdentifier>{6d54133b-e6a2-4c00-9e7d-aa5a51f90bf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="frameWork">
+      <UniqueIdentifier>{c0a14b5e-99eb-4cba-9e1a-3ef9b8521cae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="frameWork\Manager">
+      <UniqueIdentifier>{e4723130-3b69-4b9d-9498-b11a82ecbfab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3D\character">
+      <UniqueIdentifier>{b963ee5f-32ec-4e55-90f5-dea8d2915085}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3D\grid">
+      <UniqueIdentifier>{9d5dc41d-7a32-42d4-845e-78cf0ad7a488}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3D\ui">
+      <UniqueIdentifier>{817d71e1-cb54-4f16-b58d-69908e9b80b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="newFile">
+      <UniqueIdentifier>{14d733a1-b53f-4907-b928-d32e724a10d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3D\ani">
+      <UniqueIdentifier>{a42f00b1-852f-499b-ab2c-f7072a0bd789}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3D\ASE">
+      <UniqueIdentifier>{46b92dab-728f-4f9b-9779-eca94c3f7712}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3D\map">
+      <UniqueIdentifier>{7f4692cf-e558-4566-bdbe-00235e354148}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3D\OBJ">
+      <UniqueIdentifier>{b9b0ee33-5472-4eea-a1b7-9eecdb2c393f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3D\skinnedMesh">
+      <UniqueIdentifier>{52c4ea1e-6c0a-491c-8135-dcf526c786fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3D\testFile">
+      <UniqueIdentifier>{e57f8e12-8375-4d57-a05a-ee705614148a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftRender.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraCtrl.h">
+      <Filter>3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Cube.h">
+      <Filter>3D\cube</Filter>
+    </ClInclude>
+    <ClInclude Include="cubeMan.h">
+      <Filter>3D\cube</Filter>
+    </ClInclude>
+    <ClInclude Include="textManager.h">
+      <Filter>frameWork\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="VideoDevice.h">
+      <Filter>frameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility.h">
+      <Filter>frameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterCtrl.h">
+      <Filter>3D\character</Filter>
+    </ClInclude>
+    <ClInclude Include="GridCtrl.h">
+      <Filter>3D\grid</Filter>
+    </ClInclude>
+    <ClInclude Include="Pyramid.h">
+      <Filter>3D\grid</Filter>
+    </ClInclude>
+    <ClInclude Include="uiButton.h">
+      <Filter>3D\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiImageView.h">
+      <Filter>3D\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiObj.h">
+      <Filter>3D\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="uiTextView.h">
+      <Filter>3D\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="UIManager.h">
+      <Filter>frameWork\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGameManager.h">
+      <Filter>3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>3D\OBJ</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectManager.h">
+      <Filter>3D\OBJ</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>3D\OBJ</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeManager.h">
+      <Filter>frameWork\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Action.h">
+      <Filter>3D\ani</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionMove.h">
+      <Filter>3D\ani</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionRepeat.h">
+      <Filter>3D\ani</Filter>
+    </ClInclude>
+    <ClInclude Include="ActionSequence.h">
+      <Filter>3D\ani</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearInterpolation.h">
+      <Filter>3D\ani</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoReleasePool.h">
+      <Filter>3D\ani</Filter>
+    </ClInclude>
+    <ClInclude Include="iMap.h">
+      <Filter>3D\OBJ</Filter>
+    </ClInclude>
+    <ClInclude Include="OBJLoader.h">
+      <Filter>3D\OBJ</Filter>
+    </ClInclude>
+    <ClInclude Include="Group.h">
+      <Filter>3D\OBJ</Filter>
+    </ClInclude>
+    <ClInclude Include="Asciitok.h">
+      <Filter>3D\ASE</Filter>
+    </ClInclude>
+    <ClInclude Include="ASEFrame.h">
+      <Filter>3D\ASE</Filter>
+    </ClInclude>
+    <ClInclude Include="ASELoader.h">
+      <Filter>3D\ASE</Filter>
+    </ClInclude>
+    <ClInclude Include="ASECharacter.h">
+      <Filter>3D\character</Filter>
+    </ClInclude>
+    <ClInclude Include="HeightMap.h">
+      <Filter>3D\map</Filter>
+    </ClInclude>
+    <ClInclude Include="OBJMap.h">
+      <Filter>3D\map</Filter>
+    </ClInclude>
+    <ClInclude Include="RayCtrl.h">
+      <Filter>frameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="MatrialTexture.h">
+      <Filter>frameWork</Filter>
+    </ClInclude>
+    <ClInclude Include="FrustumCulling.h">
+      <Filter>newFile</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinnedMesh.h">
+      <Filter>3D\skinnedMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinnedMeshManager.h">
+      <Filter>3D\skinnedMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="AllocateHierarchy.h">
+      <Filter>3D\skinnedMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="color.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy.h">
+      <Filter>3D\testFile</Filter>
+    </ClInclude>
+    <ClInclude Include="movePattern.h">
+      <Filter>3D\testFile</Filter>
+    </ClInclude>
+    <ClInclude Include="pattern.h">
+      <Filter>3D\testFile</Filter>
+    </ClInclude>
+    <ClInclude Include="rotaPattern.h">
+      <Filter>3D\testFile</Filter>
+    </ClInclude>
+    <ClInclude Include="smallEnemy.h">
+      <Filter>3D\testFile</Filter>
+    </ClInclude>
+    <ClInclude Include="enemyManager.h">
+      <Filter>3D\testFile</Filter>
+    </ClInclude>
+    <ClInclude Include="mediEnemy.h">
+      <Filter>3D\testFile</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftRender.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraCtrl.cpp">
+      <Filter>3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Cube.cpp">
+      <Filter>3D\cube</Filter>
+    </ClCompile>
+    <ClCompile Include="cubeMan.cpp">
+      <Filter>3D\cube</Filter>
+    </ClCompile>
+    <ClCompile Include="textManager.cpp">
+      <Filter>frameWork\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoDevice.cpp">
+      <Filter>frameWork</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterCtrl.cpp">
+      <Filter>3D\character</Filter>
+    </ClCompile>
+    <ClCompile Include="GridCtrl.cpp">
+      <Filter>3D\grid</Filter>
+    </ClCompile>
+    <ClCompile Include="Pyramid.cpp">
+      <Filter>3D\grid</Filter>
+    </ClCompile>
+    <ClCompile Include="uiButton.cpp">
+      <Filter>3D\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiImageView.cpp">
+      <Filter>3D\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiObj.cpp">
+      <Filter>3D\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="uiTextView.cpp">
+      <Filter>3D\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="UIManager.cpp">
+      <Filter>frameWork\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGameManager.cpp">
+      <Filter>3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>3D\OBJ</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectManager.cpp">
+      <Filter>3D\OBJ</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>3D\OBJ</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeManager.cpp">
+      <Filter>frameWork\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Action.cpp">
+      <Filter>3D\ani</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionMove.cpp">
+      <Filter>3D\ani</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionRepeat.cpp">
+      <Filter>3D\ani</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionSequence.cpp">
+      <Filter>3D\ani</Filter>
+    </ClCompile>
+    <ClCompile Include="LinearInterpolation.cpp">
+      <Filter>3D\ani</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoReleasePool.cpp">
+      <Filter>3D\ani</Filter>
+    </ClCompile>
+    <ClCompile Include="iMap.cpp">
+      <Filter>3D\OBJ</Filter>
+    </ClCompile>
+    <ClCompile Include="OBJLoader.cpp">
+      <Filter>3D\OBJ</Filter>
+    </ClCompile>
+    <ClCompile Include="Group.cpp">
+      <Filter>3D\OBJ</Filter>
+    </ClCompile>
+    <ClCompile Include="ASEFrame.cpp">
+      <Filter>3D\ASE</Filter>
+    </ClCompile>
+    <ClCompile Include="ASELoader.cpp">
+      <Filter>3D\ASE</Filter>
+    </ClCompile>
+    <ClCompile Include="ASECharacter.cpp">
+      <Filter>3D\character</Filter>
+    </ClCompile>
+    <ClCompile Include="HeightMap.cpp">
+      <Filter>3D\map</Filter>
+    </ClCompile>
+    <ClCompile Include="OBJMap.cpp">
+      <Filter>3D\map</Filter>
+    </ClCompile>
+    <ClCompile Include="RayCtrl.cpp">
+      <Filter>frameWork</Filter>
+    </ClCompile>
+    <ClCompile Include="MatrialTexture.cpp">
+      <Filter>frameWork</Filter>
+    </ClCompile>
+    <ClCompile Include="FrustumCulling.cpp">
+      <Filter>newFile</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinnedMesh.cpp">
+      <Filter>3D\skinnedMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinnedMeshManager.cpp">
+      <Filter>3D\skinnedMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="AllocateHierarchy.cpp">
+      <Filter>3D\skinnedMesh</Filter>
+    </ClCompile>
+    <ClCompile Include="color.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy.cpp">
+      <Filter>3D\testFile</Filter>
+    </ClCompile>
+    <ClCompile Include="movePattern.cpp">
+      <Filter>3D\testFile</Filter>
+    </ClCompile>
+    <ClCompile Include="pattern.cpp">
+      <Filter>3D\testFile</Filter>
+    </ClCompile>
+    <ClCompile Include="rotaPattern.cpp">
+      <Filter>3D\testFile</Filter>
+    </ClCompile>
+    <ClCompile Include="smallEnemy.cpp">
+      <Filter>3D\testFile</Filter>
+    </ClCompile>
+    <ClCompile Include="enemyManager.cpp">
+      <Filter>3D\testFile</Filter>
+    </ClCompile>
+    <ClCompile Include="mediEnemy.cpp">
+      <Filter>3D\testFile</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SoftRender.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="SoftRender.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
